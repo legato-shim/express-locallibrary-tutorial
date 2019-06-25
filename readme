@@ -1,0 +1,194 @@
+mongodb+srv://legato-shim01:ds8997*((&))@cluster0-kcakt.mongodb.net/local_library?retryWrites=true&w=majority
+C:\Users\Shim\Downloads\mongodb-shell-win32-x86_64-2008plus-ssl-4.0.10\mongodb-win32-x86_64-2008plus-ssl-4.0.10\bin>mongo.exe "mongodb+srv://cluster0-kcakt.mongodb.net/local_library" -username legato-shim01
+MongoDB shell version v4.0.10
+Enter password:
+connecting to: mongodb://cluster0-shard-00-00-kcakt.mongodb.net.:27017,cluster0-shard-00-01-kcakt.mongodb.net.:27017,cluster0-shard-00-02-kcakt.mongodb.net.:27017/local_library?authSource=admin&gssapiServiceName=mongodb&replicaSet=Cluster0-shard-0&ssl=true
+2019-06-20T23:31:40.151+0900 I NETWORK  [js] Starting new replica set monitor for Cluster0-shard-0/cluster0-shard-00-00-kcakt.mongodb.net.:27017,cluster0-shard-00-01-kcakt.mongodb.net.:27017,cluster0-shard-00-02-kcakt.mongodb.net.:27017
+2019-06-20T23:31:41.643+0900 I NETWORK  [js] Successfully connected to cluster0-shard-00-00-kcakt.mongodb.net.:27017 (1 connections now open to cluster0-shard-00-00-kcakt.mongodb.net.:27017 with a 5 second timeout)
+2019-06-20T23:31:41.729+0900 I NETWORK  [ReplicaSetMonitor-TaskExecutor] Successfully connected to cluster0-shard-00-02-kcakt.mongodb.net.:27017 (1 connections now open to cluster0-shard-00-02-kcakt.mongodb.net.:27017 with a 5 second timeout)
+2019-06-20T23:31:41.904+0900 I NETWORK  [js] changing hosts to Cluster0-shard-0/cluster0-shard-00-00-kcakt.mongodb.net:27017,cluster0-shard-00-01-kcakt.mongodb.net:27017,cluster0-shard-00-02-kcakt.mongodb.net:27017 from Cluster0-shard-0/cluster0-shard-00-00-kcakt.mongodb.net.:27017,cluster0-shard-00-01-kcakt.mongodb.net.:27017,cluster0-shard-00-02-kcakt.mongodb.net.:27017
+2019-06-20T23:31:42.887+0900 I NETWORK  [js] Successfully connected to cluster0-shard-00-00-kcakt.mongodb.net:27017 (1 connections now open to cluster0-shard-00-00-kcakt.mongodb.net:27017 with a 5 second timeout)
+2019-06-20T23:31:42.887+0900 I NETWORK  [ReplicaSetMonitor-TaskExecutor] Successfully connected to cluster0-shard-00-02-kcakt.mongodb.net:27017 (1 connections now open to cluster0-shard-00-02-kcakt.mongodb.net:27017 with a 5 second timeout)
+2019-06-20T23:31:44.544+0900 I NETWORK  [ReplicaSetMonitor-TaskExecutor] Successfully connected to cluster0-shard-00-01-kcakt.mongodb.net:27017 (1 connections now open to cluster0-shard-00-01-kcakt.mongodb.net:27017 with a 5 second timeout)
+Implicit session: session { "id" : UUID("4bc36653-e7da-4380-bd3f-691d4f247f39") }
+MongoDB server version: 4.0.10
+MongoDB Enterprise Cluster0-shard-0:PRIMARY> help
+        db.help()                    help on db methods
+        db.mycoll.help()             help on collection methods
+        sh.help()                    sharding helpers
+        rs.help()                    replica set helpers
+        help admin                   administrative help
+        help connect                 connecting to a db help
+        help keys                    key shortcuts
+        help misc                    misc things to know
+        help mr                      mapreduce
+
+        show dbs                     show database names
+        show collections             show collections in current database
+        show users                   show users in current database
+        show profile                 show most recent system.profile entries with time >= 1ms
+        show logs                    show the accessible logger names
+        show log [name]              prints out the last segment of log in memory, 'global' is default
+        use <db_name>                set current database
+        db.foo.find()                list objects in collection foo
+        db.foo.find( { a : 1 } )     list objects in foo where a == 1
+        it                           result of the last line evaluated; use to further iterate
+        DBQuery.shellBatchSize = x   set default number of items to display on shell
+        exit                         quit the mongo shell
+MongoDB Enterprise Cluster0-shard-0:PRIMARY>
+C:\Users\Shim\Downloads\mongodb-shell-win32-x86_64-2008plus-ssl-4.0.10\mongodb-win32-x86_64-2008plus-ssl-4.0.10\bin>netstat
+
+활성 연결
+
+  프로토콜  로컬 주소           외부 주소              상태
+  TCP    127.0.0.1:22795        smartfarm:64032        ESTABLISHED
+  TCP    127.0.0.1:64032        smartfarm:22795        ESTABLISHED
+  TCP    172.30.1.51:22789      40.90.189.152:https    ESTABLISHED
+  TCP    172.30.1.51:22869      ti-in-f188:5228        ESTABLISHED
+  TCP    172.30.1.51:33090      203.217.229.98:https   ESTABLISHED
+  TCP    172.30.1.51:33116      ec2-35-166-124-147:https  ESTABLISHED
+  TCP    172.30.1.51:33123      ec2-34-237-73-95:https  ESTABLISHED
+  TCP    172.30.1.51:33419      a96-16-99-64:https     CLOSE_WAIT
+  TCP    172.30.1.51:33424      ec2-52-70-53-82:27017  ESTABLISHED
+  TCP    172.30.1.51:33425      ec2-3-216-161-50:27017  ESTABLISHED
+  TCP    172.30.1.51:33426      ec2-52-70-53-82:27017  ESTABLISHED
+  TCP    172.30.1.51:33427      ec2-3-216-161-50:27017  ESTABLISHED
+  TCP    172.30.1.51:33428      ec2-52-70-53-82:27017  ESTABLISHED
+  TCP    172.30.1.51:33429      ec2-35-171-194-77:27017  ESTABLISHED
+  TCP    172.30.1.51:33493      lb-192-30-253-125-iad:https  ESTABLISHED
+  TCP    172.30.1.51:33494      lb-192-30-253-125-iad:https  ESTABLISHED
+  TCP    172.30.1.51:33496      185.199.109.153:https  ESTABLISHED
+  TCP    172.30.1.51:33519      nrt20s08-in-f4:https   TIME_WAIT
+  TCP    172.30.1.51:33530      151.101.74.2:https     ESTABLISHED
+  TCP    172.30.1.51:33531      a184-25-17-222:https   ESTABLISHED
+  TCP    172.30.1.51:33532      151.101.230.2:https    ESTABLISHED
+  TCP    172.30.1.51:33537      151.101.230.49:https   ESTABLISHED
+  TCP    172.30.1.51:33606      151.101.65.69:https    ESTABLISHED
+  TCP    172.30.1.51:33619      201:https              ESTABLISHED
+  TCP    172.30.1.51:33703      104.24.125.241:https   ESTABLISHED
+  TCP    172.30.1.51:33704      211.115.106.73:http    CLOSE_WAIT
+  TCP    172.30.1.51:33705      ec2-35-171-194-77:27017  ESTABLISHED
+  TCP    172.30.1.51:33706      ec2-52-70-53-82:27017  ESTABLISHED
+  TCP    172.30.1.51:33707      ec2-3-216-161-50:27017  ESTABLISHED
+  TCP    172.30.1.51:33708      211.115.106.206:http   CLOSE_WAIT
+  TCP    172.30.1.51:33709      211.115.106.206:http   CLOSE_WAIT
+  TCP    172.30.1.51:33719      211.115.106.204:http   CLOSE_WAIT
+
+ C:\Users\Shim\Downloads\mongodb-shell-win32-x86_64-2008plus-ssl-4.0.10\mongodb-win32-x86_64-2008plus-ssl-4.0.10\bin\mongo.exe "mongodb+srv://cluster0-kcakt.mongodb.net/local_library" -username legato-shim01
+
+ > AuthorSchema
+ Schema {
+   obj:
+    { first_name: { type: [Function: String], required: true, max: 100 },
+      family_name: { type: [Function: String], required: true, max: 100 },
+      date_of_birth: { type: [Function: Date] },
+      date_of_death: { type: [Function: Date] } },
+   paths:
+    { first_name:
+       SchemaString {
+         enumValues: [],
+         regExp: null,
+         path: 'first_name',
+         instance: 'String',
+         validators: [Array],
+         getters: [],
+         setters: [],
+         options: [Object],
+         _index: null,
+         isRequired: true,
+         requiredValidator: [Function],
+         originalRequiredValue: true,
+         [Symbol(mongoose#schemaType)]: true },
+      family_name:
+       SchemaString {
+         enumValues: [],
+         regExp: null,
+         path: 'family_name',
+         instance: 'String',
+         validators: [Array],
+         getters: [],
+         setters: [],
+         options: [Object],
+         _index: null,
+         isRequired: true,
+         requiredValidator: [Function],
+         originalRequiredValue: true,
+         [Symbol(mongoose#schemaType)]: true },
+      date_of_birth:
+       SchemaDate {
+         path: 'date_of_birth',
+         instance: 'Date',
+         validators: [],
+         getters: [],
+         setters: [],
+         options: [Object],
+         _index: null,
+         [Symbol(mongoose#schemaType)]: true },
+      date_of_death:
+       SchemaDate {
+         path: 'date_of_death',
+         instance: 'Date',
+         validators: [],
+         getters: [],
+         setters: [],
+         options: [Object],
+         _index: null,
+         [Symbol(mongoose#schemaType)]: true },
+      _id:
+       ObjectId {
+         path: '_id',
+         instance: 'ObjectID',
+         validators: [],
+         getters: [],
+         setters: [Array],
+         options: [Object],
+         _index: null,
+         defaultValue: [Function],
+         [Symbol(mongoose#schemaType)]: true } },
+   aliases: {},
+   subpaths: {},
+   virtuals:
+    { aName:
+       VirtualType { path: 'aName', getters: [Array], setters: [], options: {} },
+      lifespan:
+       VirtualType { path: 'lifespan', getters: [Array], setters: [], options: {} } },
+   singleNestedPaths: {},
+   nested: {},
+   inherits: {},
+   callQueue: [],
+   _indexes: [],
+   methods: {},
+   methodOptions: {},
+   statics: {},
+   tree:
+    { first_name: { type: [Function: String], required: true, max: 100 },
+      family_name: { type: [Function: String], required: true, max: 100 },
+      date_of_birth: { type: [Function: Date] },
+      date_of_death: { type: [Function: Date] },
+      _id: { auto: true, type: [Function] },
+      aName:
+       VirtualType { path: 'aName', getters: [Array], setters: [], options: {} },
+      lifespan:
+       VirtualType { path: 'lifespan', getters: [Array], setters: [], options: {} } },
+   query: {},
+   childSchemas: [],
+   plugins: [],
+   '$id': 1,
+   s: { hooks: Kareem { _pres: Map {}, _posts: Map {} } },
+   _userProvidedOptions: {},
+   options:
+    { typeKey: 'type',
+      id: true,
+      noVirtualId: false,
+      _id: true,
+      noId: false,
+      validateBeforeSave: true,
+      read: null,
+      shardKey: null,
+      autoIndex: null,
+      minimize: true,
+      discriminatorKey: '__t',
+      versionKey: '__v',
+      capped: false,
+      bufferCommands: true,
+      strict: true } }
