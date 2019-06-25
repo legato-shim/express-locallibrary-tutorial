@@ -1,6 +1,10 @@
 {
-  "name": "myapppug",
+  "name": "my-express-locallibrary",
   "version": "0.0.0",
+  "engines": {
+    "node": "10.x"
+  },
+  "main": "bin/www",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
